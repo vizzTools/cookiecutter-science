@@ -24,10 +24,9 @@ container with:
 docker exec -it {{ cookiecutter.project_slug }}_notebooks /bin/bash
 ```
 
-#### Locally
+#### Conda environment
 
-To use a 100% reproducible env use always [conda-lock](https://github.com/conda/conda-lock#installation)
-With conda lock in your system, you can create the environment with:
+Create the environment with:
 
 ``` bash
 mamba env create -n {{cookiecutter.project_name}} -f environment.yml
