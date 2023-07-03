@@ -34,7 +34,7 @@ mamba env create -n {{cookiecutter.project_name}} -f environment.yml
 ```
 This will create an environment called {{cookiecutter.project_name}} with a common set of dependencies.
 
-### Second, initialize git (if needed) and the pre-commit hooks
+### `git` (if needed) and pre-commit hooks
 
 If this project is a new and standalone (not a module in a bigger project), you need to initialize git:
 
