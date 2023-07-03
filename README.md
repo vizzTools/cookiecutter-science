@@ -78,24 +78,8 @@ The jupyter lab in the env has an installed extension to format the notebooks:
 
 ![format-notebook.png](imgs/format-notebook.png)
 
-#### Scripts and IDEs
-If you work in Vscode, you can install the black formatter and the isort extension to format the code on save. 
-Same for pycharm. 
-If you don't use any of these IDEs, you can always run the formatters from the command line (inside the env):
-
-```shell
-$ black src/
-```
-
-```shell
-$ isort src/
-```
-
-_Note: the notebook engine in Vscode and pycharm is a bit more fiddly to configure for formatting and linting. 
-Use the black and isort extensions available in the marketplace and check for notebook support._  
-
-
 #### nbqa
+
 Also, the environment has the [`nbqa`](https://nbqa.readthedocs.io/en/latest/index.html) package installed. 
 This allows you to run the formatters and linters to the notebooks from the command line. For example:
 
@@ -117,3 +101,18 @@ Finally, to lint the code in cells with `ruff`:
 $ nbqa ruff notebooks/
 ```
 
+#### Scripts and IDEs
+If you work in Vscode, you can install the black formatter and the isort extension to format the code on save. 
+Same for pycharm. 
+If you don't use any of these IDEs, you can always run the formatters from the command line (inside the env):
+
+```shell
+$ black src/
+```
+
+```shell
+$ isort src/
+```
+
+_Note: the notebook engine in Vscode and pycharm is a bit more fiddly to configure for formatting and linting. 
+Use the black and isort extensions available in the marketplace and check for notebook support._
