@@ -27,3 +27,9 @@ repos:
         args: [ "--float-to-top", "--profile=black", "--check-only"]
       - id: nbqa-ruff
         args: [ "--line-length=100" , "--select=E,F,N"]
+
+  # check for private keys and passwords!
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.16.1
+    hooks:
+      - id: gitleaks
