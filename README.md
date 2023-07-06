@@ -17,7 +17,7 @@ or use directly the GitHub repo as a source for the template:
 $ cookiecutter https://github.com/vizzTools/cookiecutter-science
 ```
 
-## What's in the box?
+## What's in the box? 
 The template will create a new project with the following structure:
 
 ```
