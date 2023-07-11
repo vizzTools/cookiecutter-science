@@ -11,3 +11,4 @@ services:
         - 8888:8888
         - 8787:8787  # dask dashboard
       container_name: {{ cookiecutter.project_slug }}_notebooks
+      env_file: .env
