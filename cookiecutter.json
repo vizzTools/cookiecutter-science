@@ -1,9 +1,9 @@
 {
-    "project_name": "project_name",
+    "project_name": "science",
     "repo_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
     "project_slug": "{{ cookiecutter.project_name | slugify(separator='_') }}",
     "description": "A short description of the project.",
     "version": "0.1.0",
-    "open_source_license": ["MIT","BSD-3-Clause", "Not open source"],
+    "open_source_license": ["MIT","BSD-3-Clause", "Not open so urce"],
     "_extensions": ["cookiecutter.extensions.SlugifyExtension"]
 }

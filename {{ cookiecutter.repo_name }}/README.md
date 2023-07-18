@@ -30,7 +30,7 @@ docker exec -it {{ cookiecutter.project_slug }}_notebooks /bin/bash
 Create the environment with:
 
 ``` bash
-mamba env create -n {{cookiecutter.project_name}} -f environment.yml
+mamba env create -n {{ cookiecutter.project_slug }} -f environment.yml
 ```
 This will create an environment called {{cookiecutter.project_name}} with a common set of dependencies.
 
