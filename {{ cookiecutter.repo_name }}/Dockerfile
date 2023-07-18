@@ -5,8 +5,6 @@ COPY --chown=$MAMBA_USER:$MAMBA_USER environment.yml /tmp/environment.yml
 RUN micromamba install -n base --yes --file /tmp/environment.yml && \
     micromamba clean --all --yes
 
-# TODO: export .env in here
-
 # Otherwise python will not be found
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
