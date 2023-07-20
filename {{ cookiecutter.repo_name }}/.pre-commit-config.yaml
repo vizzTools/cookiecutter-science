@@ -22,11 +22,11 @@ repos:
     rev: 1.7.0
     hooks:
       - id: nbqa-black
-        args: [ "--line-length=100", "--check"]
+        args: [ "--line-length=100"]
       - id: nbqa-isort
-        args: [ "--float-to-top", "--profile=black", "--check-only"]
+        args: [ "--float-to-top", "--profile=black"]
       - id: nbqa-ruff
-        args: [ "--line-length=100" , "--select=E,F,N"]
+        args: [ "--line-length=100" , "--select=E,F,N", "--fix"]
 
   # check for private keys and passwords!
   - repo: https://github.com/gitleaks/gitleaks
