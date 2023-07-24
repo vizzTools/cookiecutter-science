@@ -90,3 +90,5 @@ target/
 .mypy_cache/
 
 .tox
+
+.ruff_cache
