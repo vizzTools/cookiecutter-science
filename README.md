@@ -81,7 +81,7 @@ To install pre-commit, there are multiple options:
 - Installing the environment provided in the template locally, since it has pre-commit installed.
 - Installing pre-commit in your system as globally available package or using [pipx](https://pypa.github.io/pipx/).
 
- when you start a new project run the following command in the root of the project:
+when you start a new project run the following command in the root of the project:
 
 ```shell
 pre-commit install
@@ -154,6 +154,11 @@ Here are some musts and guidelines to follow:
 🤯 Keep only the outputs of the cells that are important for understanding the process (plots, result values, etc.).
 **Avoid** any sort of **long output** that will clutter the revision of the notebook or make it difficult to read
 (whole dataframes, debug messages, gdal command outputs, etc.). Don't upload empty cells.
+
+🏁 Always try to **make your notebooks idempotent**.
+This means that you can run the cells any number of times and the result is always the same.
+
+💀 Avoid leaving superfluous or dead code. If you don't use it, delete it.
 
 🗄 Don't upload data files. Use a bucket in the cloud and load the data from there.
 
