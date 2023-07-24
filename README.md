@@ -147,12 +147,23 @@ structure as a starting point for your notebooks.
 Remember that the notebooks **are a way to communicate your work**, so it is important to keep them clean and tidy.
 Here are some musts and guidelines to follow:
 
-- Use markdown cells to explain what you are doing and why.
-- Keep only the outputs of the cells that are important to understand the process (plots, result values, etc).
-  **Avoid** any sort of **long outpust** that will clutter the revision of the notebook
-  (whole dataframes, debug messages, gdal command outputs, etc).
-- Group code and explanations in sections of related topics.
-- Make a section of util functions or a separate file of utils and import it like `%run analysis_utils.ipynb`
+⛔ Never include secrets or sensitive information in the git tracked files. If you need to use secrets, use the `.env`.
+
+🤯 Keep only the outputs of the cells that are important for understanding the process (plots, result values, etc.).
+**Avoid** any sort of **long output** that will clutter the revision of the notebook or make it difficult to read
+(whole dataframes, debug messages, gdal command outputs, etc.). Don't upload empty cells.
+
+🗄 Don't upload data files. Use a bucket in the cloud and load the data from there.
+
+🏞 Use markdown cells to explain what you are doing and why.
+
+📇 Group code and explanations in sections of related topics.
+
+🗂 Make a section of util functions or a separate file of utils
+and import it with `%run analysis_utils.ipynb` if needed. This way you can keep the notebook clean.
+
+📜 Make a script in `src/` instead of a notebook if the process will be part of a data pipeline,
+run in a server or simply if you think that it will be cleaner.
 
 If you need some inspiration, take a look at
 the [Peter Norvig's pytudes notebooks](https://github.com/norvig/pytudes/tree/main/ipynb).
