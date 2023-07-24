@@ -12,13 +12,13 @@ to deal with this kind programs.
 With cookiecutter installed, run the following command to create a new project from a local copy of the template:
 
 ```bash
-$ cookiecutter path/to/cookiecutter-science
+cookiecutter path/to/cookiecutter-science
 ```
 
 or use directly the GitHub repo as a source for the template:
 
 ```bash
-$ cookiecutter https://github.com/vizzTools/cookiecutter-science
+cookiecutter https://github.com/vizzTools/cookiecutter-science
 ```
 
 ## What's in the box?
@@ -46,7 +46,7 @@ The template will create a new project with the following structure:
 ├── .pre-commit-config.yaml     # pre-commit hooks configuration.
 ├── .gitignore
 ├── .editorconfig               # how many spaces and indentation your ide has to use.
-└── .env.example                # example of .env file.
+└── .env                        # example of .env file.
 ```
 
 Simple.
@@ -81,11 +81,13 @@ To install pre-commit, there are multiple options:
 - Installing the environment provided in the template locally, since it has pre-commit installed.
 - Installing pre-commit in your system as globally available package or using [pipx](https://pypa.github.io/pipx/).
 
-⚠**Please always install the hooks** when you start a new project with:
+ when you start a new project run the following command in the root of the project:
 
 ```shell
-$ pre-commit install
+pre-commit install
 ```
+
+⚠ **Please always run this** at the start of a new project.
 
 This will autoformat the code and run the linters every time you commit changes to the repo.
 
@@ -105,13 +107,13 @@ This allows you to run the formatters and linters for notebooks from the command
 For example:
 
 ```shell
-$ nbqa black notebooks/
+nbqa black notebooks/
 ```
 
 will format all the notebooks in the `notebooks/` folder.
 
 ```shell
-$ nbqa isort notebooks/
+nbqa isort notebooks/
 ```
 
 will sort the imports in all the notebooks in the `notebooks/` folder.
@@ -119,7 +121,7 @@ will sort the imports in all the notebooks in the `notebooks/` folder.
 Finally, to lint the code in cells with `ruff`:
 
 ```shell
-$ nbqa ruff notebooks/
+nbqa ruff notebooks/
 ```
 
 #### Scripts and IDEs
@@ -129,18 +131,18 @@ Same for pycharm.
 If you don't use any of these IDEs, you can always run the formatters from the command line (inside the env):
 
 ```shell
-$ black src/
+black src/
 ```
 
 ```shell
-$ isort src/
+isort src/
 ```
 
 _Note: the notebook engine in Vscode and pycharm is a bit more fiddly to configure for formatting and linting.
-Use the black and isort extensions available in the marketplace and check for notebook support or use `nbqa` from the
+Use the `black` and `isort` extensions available in the marketplace and check for notebook support or use `nbqa` from the
 command line._
 
-## Notebook styleguide and general guidelines
+## Notebook style guide and general guidelines
 
 The template comes with a template notebook in the `notebooks/` folder called `_template.ipynb`. It has a simple
 structure as a starting point for your notebooks.
@@ -169,4 +171,3 @@ If you need some inspiration, take a look at
 the [Peter Norvig's pytudes notebooks](https://github.com/norvig/pytudes/tree/main/ipynb).
 They are a great example of how to use notebooks in a clean and tidy way. For
 example [this one](https://github.com/norvig/pytudes/blob/main/ipynb/Economics.ipynb).
-
