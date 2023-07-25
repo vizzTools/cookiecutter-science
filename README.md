@@ -167,7 +167,7 @@ This means that you can run the cells any number of times and the result is alwa
 📇 Group code and explanations in sections of related topics.
 
 🗂 Make a section of util functions or a separate file of utils
-and import it with `%run analysis_utils.ipynb` if needed. This way you can keep the notebook clean.
+in `src/` if needed. This way you can keep the notebook clean.
 
 📜 Make a script in `src/` instead of a notebook if the process will be part of a data pipeline,
 run in a server or simply if you think that it will be cleaner.
