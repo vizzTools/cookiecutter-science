@@ -1,10 +1,15 @@
-[tool.black]
-line-length = 100
-
-[tool.isort]
-profile = "black"
-
 [tool.ruff]
-select = ["E", "F", "N"]
+select = [
+    "D1",   # pydocstyle errors
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # flake8
+    "C",    # flake8-comprehensions
+    "B",    # flake8-bugbear
+    "N",    # Naming conventions
+]
 line-length = 100
-ignore = []
+ignore = [
+    "D104", # Missing docstring in public module
+]
+extend-include = ["*.ipynb"]
