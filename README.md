@@ -91,7 +91,7 @@ pre-commit install
 
 This will autoformat the code and run the linters every time you commit changes to the repo.
 
-To format the code manually, it is a **must** to use `black` formatter and `isort` to sort the imports.
+To format the code manually, it is a **must** to use [`ruff format`](https://docs.astral.sh/ruff/formatter/).
 
 #### Notebooks
 
@@ -99,48 +99,24 @@ In Jupyter Lab, the env has an installed extension to format the notebooks:
 
 ![format-notebook.png](imgs/format-notebook.png)
 
-#### nbqa
+#### Ruff
 
-To format and lint the notebooks outside of Jupyter Lab, the environment has the
-[`nbqa`](https://nbqa.readthedocs.io/en/latest/index.html) package installed.
+To format and lint notebooks and python files, the environment has the
+[`ruff`](https://nbqa.readthedocs.io/en/latest/index.html) package installed and configured to inspect .ipynb too.
 This allows you to run the formatters and linters for notebooks from the command line.
 For example:
 
 ```shell
-nbqa black notebooks/
+ruff format .
 ```
 
-will format all the notebooks in the `notebooks/` folder.
+will format everything in the project folder (including notebooks).
 
 ```shell
-nbqa isort notebooks/
+ruff check --fix .
 ```
 
-will sort the imports in all the notebooks in the `notebooks/` folder.
-
-Finally, to lint the code in cells with `ruff`:
-
-```shell
-nbqa ruff notebooks/
-```
-
-#### Scripts and IDEs
-
-If you work in Vscode, you can install the black formatter and the isort extension to format the code on save.
-Same for pycharm.
-If you don't use any of these IDEs, you can always run the formatters from the command line (inside the env):
-
-```shell
-black src/
-```
-
-```shell
-isort src/
-```
-
-_Note: the notebook engine in Vscode and pycharm is a bit more fiddly to configure for formatting and linting.
-Use the `black` and `isort` extensions available in the marketplace and check for notebook support or use `nbqa` from the
-command line._
+will lint (and fix inplace the fixable issues) all the files in the project.
 
 ## Notebook style guide and general guidelines
 

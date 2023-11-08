@@ -7,6 +7,7 @@ select = [
     "C",    # flake8-comprehensions
     "B",    # flake8-bugbear
     "N",    # Naming conventions
+    "I",    # isort
 ]
 line-length = 100
 ignore = [
