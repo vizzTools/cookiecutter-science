@@ -11,6 +11,6 @@ select = [
 ]
 line-length = 100
 ignore = [
-    "D104", # Missing docstring in public module
+#    "D104",  # Missing docstring in public package
 ]
 extend-include = ["*.ipynb"]
