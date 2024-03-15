@@ -1,4 +1,8 @@
 [tool.ruff]
+line-length = 100
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
 select = [
     "D1",   # pydocstyle errors
     "E",    # pycodestyle errors
@@ -9,8 +13,6 @@ select = [
     "N",    # Naming conventions
     "I",    # isort
 ]
-line-length = 100
 ignore = [
     "D104",  # Missing docstring in public package
 ]
-extend-include = ["*.ipynb"]
