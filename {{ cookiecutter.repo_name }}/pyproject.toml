@@ -16,3 +16,12 @@ select = [
 ignore = [
     "D104",  # Missing docstring in public package
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"**/{tests}/*" = [
+    "D103",  # Missing docstring in public function
+]
+"*.ipynb" = [
+    "B018",  # Useless expression. Found in cells with something like `df.head()`, used in notebooks to display data
+]
+
