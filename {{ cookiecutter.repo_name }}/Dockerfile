@@ -12,4 +12,4 @@ ARG MAMBA_DOCKERFILE_ACTIVATE=1
 EXPOSE 8888
 WORKDIR /home/$MAMBA_USER
 
-ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "jupyter", "lab", "--ip=0.0.0.0","--allow-root", "--no-browser"]
+ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "jupyter", "lab", "--no-browser"]

@@ -18,5 +18,3 @@ if module_name == 'data':
 
     # Exit to cancel project
     sys.exit(1)
-
-
