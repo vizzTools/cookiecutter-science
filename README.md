@@ -30,7 +30,7 @@ The template will create a new project with the following structure:
 │                                   Must contain all the importat information about the project.
 ├── data
 │   ├── raw                     # a place for raw data.
-│   └── processed               # a place for processed data.   
+│   └── processed               # a place for processed data.
 │  
 ├── notebooks                   # a place for jupyter notebooks (only "final" versions please).
 │   └── _template.ipynb          # a template notebook with some useful structure.
