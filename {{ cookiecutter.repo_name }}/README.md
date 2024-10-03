@@ -66,3 +66,9 @@ then update the environment.yml file so others can clone your environment with:
 ``` bash
 mamba env export --no-builds -f environment.yml
 ```
+
+or if you are inside the docker container use `micromamba`
+
+```bash
+micromamba env export --no-build > notebooks/environment.yml
+```
